@@ -1,0 +1,3 @@
+-Criar um algoritmo que deverá receber dois parâmetros via terminal e através dos dois números obter quantidade de interações (for);
+- Realizar a impressão no console dos números incrementados;
+- Se o primeiro parâmetro for MAIOR que o segundo parâmetro,deverá ser lançada uma exceção customizada chamada de ParametrosInvalidosException com a mensagem: "O segundo parâmetro deve ser maior que o primeiro"

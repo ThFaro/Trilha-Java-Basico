@@ -1,0 +1,1 @@
+Criando um código fonte para simular as funções básicas de uma Smart TV, para entender melhor sobre a sintáxe aplicada a linguagem de programção, e ter um primeiro contato com linguagem direcionada a objetos.

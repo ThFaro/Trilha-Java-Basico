@@ -1,0 +1,2 @@
+- DO WHILE testa a condição no final. O bloco será executado pelo menos uma vez.
+- Nete exemplo determinamos que o telefone tocará no máximo 3 vezes para ser atendido através do metodo "private static boolean", e que será atendido de forma aleatória utilzando a classe "import java.util.Random" 

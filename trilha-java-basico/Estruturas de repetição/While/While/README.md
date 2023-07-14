@@ -1,0 +1,3 @@
+- O laço WHILE testa a condição antes de executar o código;
+- Neste caso usamos uma classe ThreadLocalRandom para nos gerar números aleatórios que foram estabelicdos atravéa da criação do metodo ao final do codigo "private static double valorAleatorio"
+- o uso do IF neste caso, foi aplicado para que o uso da mesada não exceda o seu próprio valor gereando assim um valor negativo.

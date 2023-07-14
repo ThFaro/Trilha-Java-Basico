@@ -1,0 +1,2 @@
+Criando uma seleção de candidatos baseado em seus nomes e na pretensão salarial X salário base.
+- Usamos o sistema randomico para gerar valores entre 1.800.0 e 2200.0 para os candidatos através do "ThreadLocalRandom"

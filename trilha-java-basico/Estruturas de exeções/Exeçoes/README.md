@@ -1,0 +1,1 @@
+- Uso do try/catch para tratar exeções no codigo
