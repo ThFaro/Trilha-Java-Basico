@@ -1,0 +1,1 @@
+Usando o metodo construtor.
