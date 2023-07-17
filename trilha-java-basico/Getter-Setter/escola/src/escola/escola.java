@@ -4,7 +4,7 @@ public class escola{
 
 public static void main(String[] args) {
       Aluno felipe = new Aluno();
-      felipe.setIdade(13);
+      felipe.setIdade(14);
       felipe.setNome("Felipe");  
       felipe.setSexo("masculino");
 
