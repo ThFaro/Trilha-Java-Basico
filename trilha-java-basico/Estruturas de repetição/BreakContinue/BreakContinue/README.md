@@ -1,0 +1,2 @@
+- O uso do BREAK no laço FOR interrompe o loop;
+- O uso do CONTINUE no laço FOR realiza todo o loop, excluindo apenas a variável indicada;

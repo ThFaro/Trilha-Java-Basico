@@ -1,0 +1,2 @@
+- Usando o laço de repetição FOR junto de um array;
+- Usando FOR/EACH junto de um array;
