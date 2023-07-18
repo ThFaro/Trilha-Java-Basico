@@ -1,0 +1,1 @@
+Através de uma classe genérica (Veiculo), podemos desfurtar de dados que nao são especificos de cada classe utilizando o "extends" na classe "Moto" e "Carro".
