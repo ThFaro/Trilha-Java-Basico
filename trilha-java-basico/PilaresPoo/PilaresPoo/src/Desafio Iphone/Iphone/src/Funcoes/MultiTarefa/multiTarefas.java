@@ -1,15 +1,13 @@
 package Funcoes.MultiTarefa;
 
-import  Funcoes.Internet.internet;
+import Funcoes.Internet.internet;
 import Funcoes.Musica.player;
 import Funcoes.Telefone.telefone;
 
-
-
-
 public class multiTarefas implements internet, telefone, player {
-
+   
     public void exibirPagina(){
+        checarConexao();
         System.out.println("- PÁGINA ATUAL");
     }
     public void adicionarNovaAba(){
@@ -18,7 +16,9 @@ public class multiTarefas implements internet, telefone, player {
     public void atualizarPagina(){
         System.out.println("- ATUALIZANDO PÁGINA");
     }
-
+    public void checarConexao(){  
+    }
+    
     public void ligar(){
         System.out.println("- DISCANDO");
     }
