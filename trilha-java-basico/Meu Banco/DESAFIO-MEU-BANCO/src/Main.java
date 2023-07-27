@@ -1,8 +1,9 @@
+import java.util.Scanner;
+
 import Cliente.Cliente;
 import Contas.Conta;
 import Contas.ContaCorente;
 import Contas.ContaPoupanca;
-import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
