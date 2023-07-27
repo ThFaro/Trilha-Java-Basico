@@ -2,8 +2,8 @@ package Contas;
 
 import Cliente.Cliente;
 
-public class ContaCorente extends Conta {
-    public ContaCorente(Cliente cliente){
+public class ContaCorrente extends Conta {
+    public ContaCorrente(Cliente cliente){
         super(cliente);
     }
     

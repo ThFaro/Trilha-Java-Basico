@@ -4,6 +4,7 @@ public class Cliente {
 
     private String nome;
     private String cpf;
+    private String senha;
 
     public String getNome() {
         return this.nome;
@@ -21,8 +22,13 @@ public class Cliente {
         this.cpf = cpf;
     }
 
-    
+    public String getSenha() {
+        return this.senha;
+    }
 
+    public void setSenha(String senha) {
+        this.senha = senha;
+    }
 
 
 }

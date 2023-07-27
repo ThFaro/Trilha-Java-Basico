@@ -16,7 +16,8 @@ public abstract class Conta implements InterfaceConta {
         this.agencia = AGENCIA_PADRAO;
         this.numero = SEQUENCIAL++;
         this.cliente = cliente;
-    
+        
+       
     }
 
     public  void sacar(double valor){

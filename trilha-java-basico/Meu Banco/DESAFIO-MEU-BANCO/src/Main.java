@@ -1,20 +1,23 @@
-import java.util.Scanner;
-
 import Cliente.Cliente;
 import Contas.Conta;
-import Contas.ContaCorente;
+import Contas.ContaCorrente;
 import Contas.ContaPoupanca;
+
+import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
 
         Scanner ler = new Scanner(System.in);
         String cpfDigitado;
+        String senhaDigitada;
 
         Cliente thiago = new Cliente();
         thiago.setNome("Thiago Faro");
         thiago.setCpf("229.238.738-74");
-        Conta cc = new ContaCorente(thiago);
+        thiago.setSenha("232523");
+
+        Conta cc = new ContaCorrente(thiago);
         cc.depositar(1000);
         Conta poupanca = new ContaPoupanca(thiago);
         poupanca.depositar(1500);
@@ -22,35 +25,57 @@ public class Main {
         Cliente laura = new Cliente();
         laura.setNome("Laura Caires");
         laura.setCpf("123.456.789-00");
-        Conta cc1 = new ContaCorente(laura);
+        laura.setSenha("123456");
+
+        Conta cc1 = new ContaCorrente(laura);
         cc1.depositar(500);
         Conta poupanca1 = new ContaPoupanca(laura);
         poupanca1.depositar(800);
 
-        do{
-            System.out.println("\n Bem-vindo ao Banco SASAKI \n");
-            System.out.println("Digite seu cpf: ");
+        while (true) {
+            System.out.println("\nBem-vindo ao Banco SASAKI\n");
+            System.out.println("Digite seu cpf (ou '0' para sair): ");
             cpfDigitado = ler.nextLine();
             System.out.println();
-           
-            if (!cpfDigitado.equals(thiago.getCpf()) && !cpfDigitado.equals(laura.getCpf())) {
+
+            if (cpfDigitado.equals("0")) {
+                System.out.println("Obrigado. Volte sempre!");
+                return;
+            } else if (cpfDigitado.equals(thiago.getCpf())) {
+                while (true) {
+                    System.out.println("Digite sua senha:");
+                    senhaDigitada = ler.nextLine();
+
+                    if (senhaDigitada.equals(thiago.getSenha())) {
+                        System.out.printf("Olá %s,", thiago.getNome());
+                        mostrarMenu(ler, cc, poupanca);
+                        break;
+                    } else {
+                        System.out.println("Senha inválida");
+                    }
+                }
+            } else if (cpfDigitado.equals(laura.getCpf())) {
+                while (true) {
+                    System.out.println("Digite sua senha:");
+                    senhaDigitada = ler.nextLine();
+
+                    if (senhaDigitada.equals(laura.getSenha())) {
+                        System.out.printf("Olá %s,", laura.getNome());
+                        mostrarMenu(ler, cc1, poupanca1);
+                        break;
+                    } else {
+                        System.out.println("Senha inválida");
+                    }
+                }
+            } else {
                 System.out.println("CPF INVÁLIDO");
             }
-        
-        } while (!cpfDigitado.equals(thiago.getCpf()) && !cpfDigitado.equals(laura.getCpf()));
-
-             if (cpfDigitado.equals(thiago.getCpf())) {
-            System.out.printf("Olá %s\n", thiago.getNome());
-            mostrarMenu(ler, cc, poupanca);
-            } else if(cpfDigitado.equals (laura.getCpf())) {
-            System.out.printf("Olá %s\n", laura.getNome());
-            mostrarMenu(ler, cc1, poupanca1);
-             }
+        }
     }
 
     public static void mostrarMenu(Scanner ler, Conta cc, Conta poupanca) {
         int escolha;
-        do {
+        while (true) {
             System.out.println("\nMENU INICIAL");
             System.out.println("1-Imprimir extrato Conta Corrente");
             System.out.println("2-Imprimir extrato Conta Poupança");
@@ -65,6 +90,7 @@ public class Main {
             System.out.println("0-Sair");
             System.out.println("Escolha uma opção: ");
             escolha = ler.nextInt();
+            ler.nextLine(); 
             System.out.println();
 
             switch (escolha) {
@@ -106,7 +132,7 @@ public class Main {
                     } else if (contaSaque == 1 && saque > cc.getSaldo()) {
                         System.out.println("Saldo insuficiente. Operação Cancelada");
                         cc.exibirSaldoTela();
-                        
+
                     } else if (contaSaque == 2 && saque <= poupanca.getSaldo()) {
                         poupanca.sacar(saque);
                         System.out.println("Saque realizado com sucesso");
@@ -139,12 +165,12 @@ public class Main {
 
                 case 0:
                     System.out.println("Obrigado");
-                    break;
+                    return; // Voltar para a tela inicial do banco
 
                 default:
                     System.out.println("Opção inválida");
                     break;
             }
-        } while (escolha != 0);
+        }
     }
 }
