@@ -30,6 +30,7 @@ public abstract class Conta implements InterfaceConta {
         this.sacar(valor);
         contaDestino.depositar(valor);
     }
+
     public void enviarPix(double valor, Conta contaDestino){
         this.sacar(valor);
         contaDestino.depositar(valor);
@@ -57,6 +58,10 @@ public abstract class Conta implements InterfaceConta {
     }
     protected void exibirSaldo(){
         System.out.println(String.format("Saldo atual: %.2f", this.saldo));
+    }
+
+    public String getNome() {
+        return null;
     }
 
 

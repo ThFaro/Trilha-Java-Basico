@@ -5,7 +5,7 @@ import Contas.ContaPoupanca;
 
 import java.util.Scanner;
 
-public class Main {
+public class CaixaEletronico {
     public static void main(String[] args) {
 
         Scanner ler = new Scanner(System.in);
@@ -146,9 +146,12 @@ public class Main {
                     break;
 
                 case 8:
+
                     System.out.println("Qual valor gostaria de transferir: ");
-                    double transferencia = ler.nextDouble();
-                    cc.transferir(transferencia, poupanca);
+                    double valorDesejado = ler.nextDouble();
+                    cc.transferir(valorDesejado, poupanca);
+                    cc.exibirSaldoTela();
+                
                     break;
 
                 case 9:
@@ -165,7 +168,7 @@ public class Main {
 
                 case 0:
                     System.out.println("Obrigado");
-                    return; // Voltar para a tela inicial do banco
+                    return;
 
                 default:
                     System.out.println("Opção inválida");
