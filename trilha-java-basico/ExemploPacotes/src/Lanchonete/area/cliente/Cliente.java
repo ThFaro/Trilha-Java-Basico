@@ -2,7 +2,7 @@ package Lanchonete.area.cliente;
 
 public class Cliente {
 	public void escolherPedido() {
-		System.out.println("Cliente escolhendo o pedido.");		
+		System.out.println("Cliente escolhendo  pedido.");		
 	}
 	
 	private void consultarSaldoNoApp() {
