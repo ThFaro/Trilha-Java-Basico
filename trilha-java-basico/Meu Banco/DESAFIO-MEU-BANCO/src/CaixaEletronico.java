@@ -129,9 +129,11 @@ public class CaixaEletronico {
                         cc.sacar(saque);
                         System.out.println("Saque realizado com sucesso");
                         cc.exibirSaldoTela();
+                        System.out.println();
                     } else if (contaSaque == 1 && saque > cc.getSaldo()) {
                         System.out.println("Saldo insuficiente. Operação Cancelada");
                         cc.exibirSaldoTela();
+                        System.out.println();
 
                     } else if (contaSaque == 2 && saque <= poupanca.getSaldo()) {
                         poupanca.sacar(saque);
