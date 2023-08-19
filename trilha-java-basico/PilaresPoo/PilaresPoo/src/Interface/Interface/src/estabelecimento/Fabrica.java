@@ -1,9 +1,9 @@
-package estabelecimento;
+package Interface.Interface.src.estabelecimento;
 
-import equipamentos.copiadora.Copiadora;
-import equipamentos.digitalizadora.Digitalizadora;
-import equipamentos.impressora.Impressora;
-import equipamentos.multifuncional.Multifuncional;
+import Interface.Interface.src.equipamentos.impressora.Impressora;
+import Interface.Interface.src.equipamentos.copiadora.*;
+import Interface.Interface.src.equipamentos.digitalizadora.*;
+import Interface.Interface.src.equipamentos.multifuncional.*;
 
 public class Fabrica {
     public static void main(String[] args) {

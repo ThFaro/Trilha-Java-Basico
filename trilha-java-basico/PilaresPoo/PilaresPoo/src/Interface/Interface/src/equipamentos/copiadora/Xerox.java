@@ -1,4 +1,4 @@
-package equipamentos.copiadora;
+package Interface.Interface.src.equipamentos.copiadora;
 
 public class Xerox implements Copiadora{
     public void copiar(){

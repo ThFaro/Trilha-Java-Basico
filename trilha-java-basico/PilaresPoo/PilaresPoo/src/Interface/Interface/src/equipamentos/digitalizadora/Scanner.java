@@ -1,4 +1,4 @@
-package equipamentos.digitalizadora;
+package Interface.Interface.src.equipamentos.digitalizadora;
 
 public class Scanner implements Digitalizadora{
     public void digitalizar(){

@@ -1,9 +1,4 @@
-package Dispositivo;
 
-import Funcoes.Internet.internet;
-import Funcoes.MultiTarefa.multiTarefas;
-import Funcoes.Musica.player;
-import Funcoes.Telefone.telefone;
 
 public class Iphone {
     public static void main(String[] args) {

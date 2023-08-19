@@ -1,4 +1,3 @@
-package Funcoes.Internet;
 
 public interface internet{
     
